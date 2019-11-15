@@ -45,6 +45,17 @@ section p{padding:20px;margin-left:10px;}
   margin:10px;
   text-align:center;
 }
+.addto{
 
-    
+text-decoration: none;
+border:1px solid grey;
+margin-top:5px;
+padding:2px 5px;
+border-radius:5px;
+color:blue;
+background-color:orange;
+}
+.addto:hover{text-decoration: underline;}
+#search{position:relative;top:50px;left:50px;}
+
 

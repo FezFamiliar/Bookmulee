@@ -19,7 +19,8 @@ if(isset($_GET['id'])):
         <img src="img/placeholder.png" width="200" height="200">
         <span>Title:&nbsp;<?php echo $result_prod['title'] ?></span><br>
         <span>By:&nbsp;<?php echo $result_prod['author'] ?></span><br>
-        <span>Price:&nbsp;<?php echo $result_prod['price'] ?>&nbsp;$</span>
+        <span>Price:&nbsp;<?php echo $result_prod['price'] ?>&nbsp;$</span><br><br>
+        <a href="" class="addto">add to cart</a>
     </div>
 <?php endwhile;
 else:
