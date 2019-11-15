@@ -12,9 +12,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
   $query = "SELECT * FROM `users` WHERE username = '".$username."' AND password = '".md5($password)."'";
+  echo $query;
+  exit();
   $result = mysqli_query($conn,$query);
   if(mysqli_num_rows($result) > 0){
-    $_SESSION['username'] = $username;
+        $row = $result->fetch_assoc();
+    $_SESSION['username'] = $row['username'];
     echo '<p class="success">Successfully logged in!</p>';
 
   } 
