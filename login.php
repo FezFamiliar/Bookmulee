@@ -12,8 +12,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
   $query = "SELECT * FROM `users` WHERE username = '".$username."' AND password = '".md5($password)."'";
-  echo $query;
-  exit();
+  // echo $query;
+  // exit();
   $result = mysqli_query($conn,$query);
   if(mysqli_num_rows($result) > 0){
         $row = $result->fetch_assoc();

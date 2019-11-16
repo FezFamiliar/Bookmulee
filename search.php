@@ -7,8 +7,10 @@ include 'menu.php';
 if(isset($_GET['search-term'])):
 
 
-    $query = "SELECT * FROM books WHERE title LIKE %'".$_GET['search-term']."'%";
+    $query = "SELECT * FROM books WHERE title LIKE '%".$_GET['search-term']."%' LIMIT 3";
     $row = mysqli_query($conn,$query);
+    // print($query);
+    // exit(1);
     while($result = $row->fetch_assoc()): ?>
 
          <div class="books">
